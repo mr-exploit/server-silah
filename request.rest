@@ -1,0 +1,127 @@
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "user",
+    "email": "user@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+###
+// get All Users
+GET http://localhost:5000/users
+
+###
+// Get Single User
+GET http://localhost:5000/users/25a2b7d5-2b67-47df-98d7-25146082123b
+
+###
+// Update user
+PATCH  http://localhost:5000/users/e04ded9d-f92b-4fdb-9db1-80b9ccaef3e3
+Content-Type: application/json
+
+{
+    "name": "ruffian azhari",
+    "email": "ruffian@gmail.com",
+    "password": "",
+    "confPassword": "",
+    "role": "user"
+}
+
+###
+// Update user
+DELETE http://localhost:5000/users/7c563bef-6b09-48aa-835a-326ca0a31ebc
+
+###
+// Login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password" : "123456"
+    
+}
+
+###
+// Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "ruffian@gmail.com",
+    "password" : "123456"
+    
+}
+
+
+###
+GET http://localhost:5000/me
+
+###
+//logout
+DELETE http://localhost:5000/logout
+
+###
+// get All Products
+GET http://localhost:5000/products
+
+###
+// get Single Products
+GET http://localhost:5000/products/f854fa12-3169-4887-85c6-7175240367c2
+
+###
+// POST Data Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "product 6",
+    "price" : 9936
+    
+}
+
+###
+// PATCH Data Product
+PATCH http://localhost:5000/products/f92e1287-5890-4121-bd88-f94329642353
+Content-Type: application/json
+
+{
+    "name": "product updated",
+    "price" : 9213
+}
+
+###
+// get All data sekolah
+GET http://localhost:5000/datasekolah
+
+###
+// get Single Data Sekolah
+GET http://localhost:5000/datasekolah/d87b0c80-4cab-440f-ac94-583e7ae07199
+###
+
+// PATCH Data Sekolah
+PATCH http://localhost:5000/datasekolah/d87b0c80-4cab-440f-ac94-583e7ae07199
+Content-Type: application/json
+
+{
+    "namescholl": "smpnsdwa111",
+    "pengelola": "Negeri",
+    "tingkatan": "SMP",
+    "alamat": "dawdada",
+    "nohp": 123131,
+    "kepsek": "dwwd"
+}
+
+###
+// Delete Data Product
+DELETE  http://localhost:5000/products/489adf48-f4a8-47d0-a844-5694f2224a7e
+Content-Type: application/json
+
+{
+    "name": "product updated",
+    "price" : 9213
+    
+}
