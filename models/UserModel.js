@@ -30,7 +30,7 @@ const Users = db.define('users', {
     },
     password: {
         type: DataTypes.STRING,
-        allowNull: true,
+        allowNull: false,
         validate: {
             notEmpty: true
         }

@@ -43,12 +43,12 @@ export const createUser = async (req, res) => {
             .json({
                 msg: "Password dan Confirm password tidak cocok!"
             });
-    // const hashPassword = await argon2.hash(password);
+    const hashPassword = await argon2.hash(password);
     try {
         await User.create({
             name: name,
             email: email,
-            password: password,
+            password: hashPassword,
             role: role
         });
         res.status(201).json({
