@@ -59,7 +59,6 @@ app.use(PerbaikanRoute);
 app.use(PerbaikanValidasiRoute);
 // store.sync();
 
-app.listen(process.env.APP_PORT.NODE_ENV !== 'production' ? 'localhost' : '0.0.0.0', () => {
-    
+app.listen(process.env.APP_PORT, () => {
     console.log('Server Up and Running...');
 });
