@@ -44,6 +44,7 @@ export const createUser = async (req, res) => {
                 msg: "Password dan Confirm password tidak cocok!"
             });
     const hashPassword = await argon2.hash(password);
+    // 
     try {
         await User.create({
             name: name,
