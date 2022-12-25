@@ -8,8 +8,8 @@ export const Login = async(req, res) => {
         }
     });
     if (!user) return res.status(404).json({ msg: "User tidak ditemukan" });
-    // const match = await argon2.verify(user.password, req.body.password);
-    // if (!match) return res.status(400).json({ msg: "Wrong Password" });
+    const match = await argon2.verify(user.password, req.body.password);
+    if (!match) return res.status(400).json({ msg: "Wrong Password" });
     req.session.userId = user.uuid;
     const uuid = user.uuid;
     const name = user.name;
